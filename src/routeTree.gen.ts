@@ -11,6 +11,7 @@
 import { Route as rootRouteImport } from './routes/__root'
 import { Route as IndexRouteImport } from './routes/index'
 import { Route as AProposRouteImport } from './routes/a-propos'
+import { Route as CvRouteImport } from './routes/cv'
 import { Route as EtudesRouteImport } from './routes/etudes'
 import { Route as ProjetsRouteImport } from './routes/projets'
 
@@ -22,6 +23,11 @@ const IndexRoute = IndexRouteImport.update({
 const AProposRoute = AProposRouteImport.update({
   id: '/a-propos',
   path: '/a-propos',
+  getParentRoute: () => rootRouteImport,
+} as any)
+const CvRoute = CvRouteImport.update({
+  id: '/cv',
+  path: '/cv',
   getParentRoute: () => rootRouteImport,
 } as any)
 const EtudesRoute = EtudesRouteImport.update({
@@ -38,12 +44,14 @@ const ProjetsRoute = ProjetsRouteImport.update({
 export interface FileRoutesByFullPath {
   '/': typeof IndexRoute
   '/a-propos': typeof AProposRoute
+  '/cv': typeof CvRoute
   '/etudes': typeof EtudesRoute
   '/projets': typeof ProjetsRoute
 }
 export interface FileRoutesByTo {
   '/': typeof IndexRoute
   '/a-propos': typeof AProposRoute
+  '/cv': typeof CvRoute
   '/etudes': typeof EtudesRoute
   '/projets': typeof ProjetsRoute
 }
@@ -51,20 +59,22 @@ export interface FileRoutesById {
   __root__: typeof rootRouteImport
   '/': typeof IndexRoute
   '/a-propos': typeof AProposRoute
+  '/cv': typeof CvRoute
   '/etudes': typeof EtudesRoute
   '/projets': typeof ProjetsRoute
 }
 export interface FileRouteTypes {
   fileRoutesByFullPath: FileRoutesByFullPath
-  fullPaths: '/' | '/a-propos' | '/etudes' | '/projets'
+  fullPaths: '/' | '/a-propos' | '/cv' | '/etudes' | '/projets'
   fileRoutesByTo: FileRoutesByTo
-  to: '/' | '/a-propos' | '/etudes' | '/projets'
-  id: '__root__' | '/' | '/a-propos' | '/etudes' | '/projets'
+  to: '/' | '/a-propos' | '/cv' | '/etudes' | '/projets'
+  id: '__root__' | '/' | '/a-propos' | '/cv' | '/etudes' | '/projets'
   fileRoutesById: FileRoutesById
 }
 export interface RootRouteChildren {
   IndexRoute: typeof IndexRoute
   AProposRoute: typeof AProposRoute
+  CvRoute: typeof CvRoute
   EtudesRoute: typeof EtudesRoute
   ProjetsRoute: typeof ProjetsRoute
 }
@@ -83,6 +93,13 @@ declare module '@tanstack/react-router' {
       path: '/a-propos'
       fullPath: '/a-propos'
       preLoaderRoute: typeof AProposRouteImport
+      parentRoute: typeof rootRouteImport
+    }
+    '/cv': {
+      id: '/cv'
+      path: '/cv'
+      fullPath: '/cv'
+      preLoaderRoute: typeof CvRouteImport
       parentRoute: typeof rootRouteImport
     }
     '/etudes': {
@@ -105,6 +122,7 @@ declare module '@tanstack/react-router' {
 const rootRouteChildren: RootRouteChildren = {
   IndexRoute: IndexRoute,
   AProposRoute: AProposRoute,
+  CvRoute: CvRoute,
   EtudesRoute: EtudesRoute,
   ProjetsRoute: ProjetsRoute,
 }
