@@ -8,15 +8,8 @@ for the project part add place for the pfe project of the implement of big data 
 for the Application Web de Pointage Automatisé avec Reconnaissance Faciale sur Caméras IP (stage d ete ) add description and place for demo(video )of the applicatiion and also project repport
 that i will added by myself after this
 
-This project was built with [Lovable](https://lovable.dev).
 
-## Build with Lovable
 
-Continue developing this project in the [Lovable editor](https://lovable.dev/projects/0b9fa26d-c59f-4426-9c13-9ff3f62026b0).
-
-- **Ship faster**: describe what you want to build and Lovable handles the code.
-- **Stay in sync**: every change made in Lovable is committed straight to this repository.
-- **Full ownership**: this code is yours. Push to `main` on GitHub and your changes sync back into Lovable, ready for your next prompt.
 
 ## Development
 
