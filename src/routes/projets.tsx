@@ -138,11 +138,6 @@ function Projects() {
               label="Rapport de projet"
               icon={<FileText className="size-3.5" />}
             />
-            <FileSlot
-              fileKey="pointageAttestation"
-              label="Attestation de stage"
-              icon={<Award className="size-3.5" />}
-            />
           </div>
         </article>
 

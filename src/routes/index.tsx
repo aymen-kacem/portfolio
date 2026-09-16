@@ -1,6 +1,13 @@
 import { createFileRoute, Link } from "@tanstack/react-router";
 import { Github, Linkedin, Mail } from "lucide-react";
-import avatar from "@/assets/aymen.jpg.asset.json";
+import {
+  SiApachekafka, SiApachespark, SiApachehadoop, SiPython, SiTypescript,
+  SiJavascript, SiPhp, SiDjango, SiReact, SiAngular, SiLaravel,
+  SiPostgresql, SiMysql, SiGit, SiDocker, SiPostman, SiFirebase,
+  SiOpencv, SiSocketdotio
+} from "react-icons/si";
+import { FaJava, FaDatabase, FaCode } from "react-icons/fa";
+const avatar = { url: "/profile.jpg" };
 
 export const Route = createFileRoute("/")({
   head: () => ({
@@ -20,6 +27,65 @@ export const Route = createFileRoute("/")({
   }),
   component: Index,
 });
+
+const skillGroups = {
+  left: [
+    {
+      title: "Big Data",
+      skills: [
+        { icon: SiApachekafka, label: "Kafka" },
+        { icon: SiApachespark, label: "Spark" },
+        { icon: SiApachespark, label: "Spark Streaming" },
+        { icon: SiApachehadoop, label: "Hadoop / HDFS" },
+        { icon: FaDatabase, label: "Kudu" },
+        { icon: FaDatabase, label: "Impala" },
+        { icon: SiApachehadoop, label: "YARN" },
+      ],
+    },
+    {
+      title: "Frameworks",
+      skills: [
+        { icon: SiDjango, label: "Django" },
+        { icon: SiReact, label: "React" },
+        { icon: SiAngular, label: "Angular" },
+        { icon: SiLaravel, label: "Laravel 11" },
+      ],
+    },
+    {
+      title: "Outils",
+      skills: [
+        { icon: SiGit, label: "Git" },
+        { icon: SiDocker, label: "Docker" },
+        { icon: SiPostman, label: "Postman" },
+        { icon: SiFirebase, label: "Firebase" },
+        { icon: SiSocketdotio, label: "WebSockets" },
+      ],
+    },
+  ],
+  right: [
+    {
+      title: "Langages",
+      skills: [
+        { icon: SiPython, label: "Python" },
+        { icon: FaJava, label: "Java" },
+        { icon: SiTypescript, label: "TypeScript" },
+        { icon: SiJavascript, label: "JavaScript" },
+        { icon: FaDatabase, label: "SQL" },
+        { icon: SiPhp, label: "PHP" },
+      ],
+    },
+    {
+      title: "Données & IA",
+      skills: [
+        { icon: SiPostgresql, label: "PostgreSQL" },
+        { icon: SiMysql, label: "MySQL" },
+        { icon: SiOpencv, label: "OpenCV" },
+        { icon: FaCode, label: "Tesseract OCR" },
+        { icon: FaCode, label: "PyMuPDF" },
+      ],
+    },
+  ],
+};
 
 function Index() {
   return (
@@ -74,18 +140,72 @@ function Index() {
             Je maîtrise les bases telles que{" "}
             <em className="text-primary">Python, Java, TypeScript, SQL et PHP</em>.
           </p>
-          <div>
-            <p className="text-foreground">Mes domaines d'intérêt sont :</p>
-            <ul className="mt-2 space-y-1 pl-4 text-primary italic">
-              <li>- Architectures Big Data (Kafka, Spark, Hadoop, Kudu, Impala)</li>
-              <li>- Intelligence Artificielle & Vision par ordinateur</li>
-              <li>- Développement web full-stack</li>
-            </ul>
+        </div>
+
+        <div className="mt-12">
+          <h3 className="text-xl font-bold text-center mb-8">
+            Mes compétences <span className="text-primary">professionnelles</span>
+          </h3>
+          <div className="grid gap-6 md:grid-cols-2">
+            <div className="space-y-4">
+              {skillGroups.left.map((group) => (
+                <div key={group.title} className="rounded-xl border border-primary/20 bg-secondary/10 p-5">
+                  <h3 className="mb-4 text-sm font-semibold text-primary">{group.title}</h3>
+                  <div className="flex flex-wrap gap-2.5">
+                    {group.skills.map((skill) => (
+                      <div
+                        key={skill.label}
+                        className="flex items-center gap-2 rounded-full border border-primary/20 bg-secondary/30 px-3 py-1.5 text-xs text-foreground transition-colors hover:border-primary/50 hover:bg-primary/10"
+                      >
+                        <skill.icon className="size-3.5" />
+                        <span>{skill.label}</span>
+                      </div>
+                    ))}
+                  </div>
+                </div>
+              ))}
+            </div>
+            <div className="space-y-4">
+              {skillGroups.right.map((group) => (
+                <div key={group.title} className="rounded-xl border border-primary/20 bg-secondary/10 p-5">
+                  <h3 className="mb-4 text-sm font-semibold text-primary">{group.title}</h3>
+                  <div className="flex flex-wrap gap-2.5">
+                    {group.skills.map((skill) => (
+                      <div
+                        key={skill.label}
+                        className="flex items-center gap-2 rounded-full border border-primary/20 bg-secondary/30 px-3 py-1.5 text-xs text-foreground transition-colors hover:border-primary/50 hover:bg-primary/10"
+                      >
+                        <skill.icon className="size-3.5" />
+                        <span>{skill.label}</span>
+                      </div>
+                    ))}
+                  </div>
+                </div>
+              ))}
+            </div>
           </div>
-          <p>
-            J'applique ma passion pour construire des systèmes de données temps réel et des
-            applications intelligentes, du pipeline d'ingestion jusqu'à l'interface utilisateur.
-          </p>
+        </div>
+
+        <p className="mt-8">
+          J'applique ma passion pour construire des systèmes de données temps réel et des
+          applications intelligentes, du pipeline d'ingestion jusqu'à l'interface utilisateur.
+        </p>
+
+        <div className="mt-12">
+          <h3 className="mb-8 text-center text-xl font-bold">
+            Mes <span className="text-primary">certifications</span>
+          </h3>
+          <div className="mx-auto max-w-3xl">
+            <div className="rounded-xl border border-primary/20 bg-secondary/10 p-6">
+              <h4 className="font-semibold text-foreground">AWS Academy Graduate — Cloud Foundations</h4>
+              <p className="mt-1 text-sm text-muted-foreground">
+                Training Badge (20h) : services essentiels AWS, architecture cloud, sécurité et déploiement.
+              </p>
+              <div className="mt-6 overflow-hidden rounded-md border border-border/40 shadow-sm">
+                <img src="/aws-cert.png" alt="Certification AWS" className="w-full object-cover" />
+              </div>
+            </div>
+          </div>
         </div>
 
         <div className="mt-16 text-center">

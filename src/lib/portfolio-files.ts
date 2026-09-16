@@ -7,12 +7,12 @@
  */
 export const portfolioFiles = {
   /** Rapport du stage de fin d'études (Architecture Big Data) — PDF */
-  pfeReport: "",
+  pfeReport: "/pfe-rapport.pdf",
   /** Attestation de stage — Sifast (Architecture Big Data) — PDF ou image */
-  pfeAttestation: "",
+  pfeAttestation: "/pfe-attestation.jpg",
 
   /** Rapport du stage d'été (Pointage automatisé) — PDF */
-  pointageReport: "",
+  pointageReport: "/pointage-rapport.pdf",
   /** Vidéo de démonstration de l'application de pointage — MP4 ou lien YouTube */
   pointageDemoVideo: "",
   /** Attestation de stage — IP Soft (Pointage automatisé) — PDF ou image */
