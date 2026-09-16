@@ -11,6 +11,7 @@
 import { Route as rootRouteImport } from './routes/__root'
 import { Route as IndexRouteImport } from './routes/index'
 import { Route as AProposRouteImport } from './routes/a-propos'
+import { Route as ProjetsRouteImport } from './routes/projets'
 
 const IndexRoute = IndexRouteImport.update({
   id: '/',
@@ -22,31 +23,40 @@ const AProposRoute = AProposRouteImport.update({
   path: '/a-propos',
   getParentRoute: () => rootRouteImport,
 } as any)
+const ProjetsRoute = ProjetsRouteImport.update({
+  id: '/projets',
+  path: '/projets',
+  getParentRoute: () => rootRouteImport,
+} as any)
 
 export interface FileRoutesByFullPath {
   '/': typeof IndexRoute
   '/a-propos': typeof AProposRoute
+  '/projets': typeof ProjetsRoute
 }
 export interface FileRoutesByTo {
   '/': typeof IndexRoute
   '/a-propos': typeof AProposRoute
+  '/projets': typeof ProjetsRoute
 }
 export interface FileRoutesById {
   __root__: typeof rootRouteImport
   '/': typeof IndexRoute
   '/a-propos': typeof AProposRoute
+  '/projets': typeof ProjetsRoute
 }
 export interface FileRouteTypes {
   fileRoutesByFullPath: FileRoutesByFullPath
-  fullPaths: '/' | '/a-propos'
+  fullPaths: '/' | '/a-propos' | '/projets'
   fileRoutesByTo: FileRoutesByTo
-  to: '/' | '/a-propos'
-  id: '__root__' | '/' | '/a-propos'
+  to: '/' | '/a-propos' | '/projets'
+  id: '__root__' | '/' | '/a-propos' | '/projets'
   fileRoutesById: FileRoutesById
 }
 export interface RootRouteChildren {
   IndexRoute: typeof IndexRoute
   AProposRoute: typeof AProposRoute
+  ProjetsRoute: typeof ProjetsRoute
 }
 
 declare module '@tanstack/react-router' {
@@ -65,12 +75,20 @@ declare module '@tanstack/react-router' {
       preLoaderRoute: typeof AProposRouteImport
       parentRoute: typeof rootRouteImport
     }
+    '/projets': {
+      id: '/projets'
+      path: '/projets'
+      fullPath: '/projets'
+      preLoaderRoute: typeof ProjetsRouteImport
+      parentRoute: typeof rootRouteImport
+    }
   }
 }
 
 const rootRouteChildren: RootRouteChildren = {
   IndexRoute: IndexRoute,
   AProposRoute: AProposRoute,
+  ProjetsRoute: ProjetsRoute,
 }
 export const routeTree = rootRouteImport
   ._addFileChildren(rootRouteChildren)
