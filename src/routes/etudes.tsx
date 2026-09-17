@@ -24,7 +24,7 @@ const items = [
     period: "2024 – 2027 (En cours)",
     title: "Diplôme national d'ingénieur, spécialité Informatique",
     school:
-      "Institut International de Technologie (IIT), Sfax, Tunisie — échange académique à l'Université de Technologie de Troyes (UTT), France (dernière année)",
+      "Institut International de Technologie (IIT), Sfax, Tunisie —Université de Technologie de Troyes (UTT), France ",
     text: "Formation orientée Big Data et Intelligence Artificielle : architectures distribuées, traitement de données massives, machine learning et développement logiciel.",
   },
   {

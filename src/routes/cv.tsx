@@ -22,7 +22,7 @@ export const Route = createFileRoute("/cv")({
 const experiences = [
   {
     title: "Développement d'une plateforme « Super-App » pour la vie étudiante",
-    period: "BINVERSE, Sfax | Janvier – Mars 2026 (3 mois)",
+    period: "BINVERSE, Sfax | Janvier – mai 2026 (5 mois)",
     bullets: [
       "Conception d'une plateforme intégrant vie sociale, académique et professionnelle des étudiants",
       "Développement d'un système de gestion de clubs universitaires (plus de 20 clubs, 300+ membres)",
@@ -97,7 +97,7 @@ function CV() {
                 Artificielle.
               </p>
               <p className="mt-2 text-sm text-muted-foreground">
-                En échange académique à l'Université de Technologie de Troyes (UTT), France, 
+                En échange académique à l'Université de Technologie de Troyes (UTT), France,
                 pour la dernière année du cycle d'ingénieur.
               </p>
               <p className="mt-2 text-sm font-semibold text-foreground">Curieux • Esprit analytique • Autonome</p>
@@ -177,7 +177,7 @@ function CV() {
                   <span className="text-foreground font-semibold">
                     Diplôme national d'ingénieur, spécialité Informatique
                   </span>{" "}
-                  Institut International de Technologie (IIT), Sfax, Tunisie & Université de Technologie de Troyes (UTT), France (échange académique, dernière année) <span className="text-primary">•</span> 2024 – 2027 (en cours)
+                  Institut International de Technologie (IIT), Sfax, Tunisie & Université de Technologie de Troyes (UTT), France <span className="text-primary">•</span> 2024 – 2027 (en cours)
                 </li>
                 <li>
                   <span className="text-foreground font-semibold">Licence en Sciences de l'Informatique — Génie Logiciel et Systèmes d'Information</span>{" "}
