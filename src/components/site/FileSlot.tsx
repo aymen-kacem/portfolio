@@ -32,9 +32,9 @@ export function FileSlot({ fileKey, label, icon }: Props) {
 }
 
 export function VideoSlot({ fileKey, title }: { fileKey: PortfolioFileKey; title: string }) {
-  const src = portfolioFiles[fileKey];
+  const rawSrc = portfolioFiles[fileKey];
 
-  if (!src) {
+  if (!rawSrc) {
     return (
       <div className="flex aspect-video w-full items-center justify-center rounded-lg border border-dashed border-border bg-secondary/40 text-center text-xs text-muted-foreground">
         Vidéo de démonstration à ajouter
@@ -42,7 +42,12 @@ export function VideoSlot({ fileKey, title }: { fileKey: PortfolioFileKey; title
     );
   }
 
-  const isEmbed = /youtube|youtu\.be|vimeo/.test(src);
+  // Handle Google Drive links for embedding
+  const src = rawSrc.includes("drive.google.com")
+    ? rawSrc.replace(/\/view.*$/, "/preview")
+    : rawSrc;
+
+  const isEmbed = /youtube|youtu\.be|vimeo|drive\.google\.com/.test(src);
 
   return isEmbed ? (
     <iframe
