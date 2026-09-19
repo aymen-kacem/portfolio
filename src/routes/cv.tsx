@@ -89,9 +89,7 @@ function CV() {
             </div>
 
             <Block title="Profil">
-              <p className="text-sm text-muted-foreground">
-                24 ans
-              </p>
+
               <p className="mt-2 text-sm text-muted-foreground">
                 Étudiant ingénieur en informatique, spécialité Big Data & Intelligence
                 Artificielle.
