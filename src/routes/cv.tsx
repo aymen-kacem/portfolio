@@ -1,7 +1,7 @@
 import { createFileRoute } from "@tanstack/react-router";
 import { Download, Mail, Phone, MapPin, Linkedin, Github } from "lucide-react";
 const avatar = { url: "/profile.jpg" };
-const cvFile = { url: "/cv.pdf" };
+const cvFile = { url: "/Aymen_Kacem_CV.pdf" };
 
 export const Route = createFileRoute("/cv")({
   head: () => ({
