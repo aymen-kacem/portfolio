@@ -21,25 +21,24 @@ export const Route = createFileRoute("/cv")({
 
 const experiences = [
   {
-    title: "Développement d'une plateforme « Super-App » pour la vie étudiante",
+    title: "Stage — Développeur Full Stack",
     period: "BINVERSE, Sfax | Janvier – mai 2026 (5 mois)",
     bullets: [
       "Conception d'une plateforme intégrant vie sociale, académique et professionnelle des étudiants",
       "Développement d'un système de gestion de clubs universitaires (plus de 20 clubs, 300+ membres)",
       "Implémentation d'un Campus Feed interactif (posts, stories, événements) pour 500+ utilisateurs",
       "Création d'un module recrutement/stages avec système Swipe-to-Apply",
-      "Mise en place d'un système de gamification (badges, classements, engagement)",
-      "Architecture technique : React.js, Laravel 11, MySQL, WebSockets — 100+ utilisateurs simultanés",
+      "Architecture technique : React.js, Laravel 11, MySQL, WebSockets — 100+ utilisateurs",
     ],
   },
   {
-    title: "Application Web de Pointage Automatisé par Reconnaissance Faciale",
+    title: "Stage — Data Scientist",
     period: "IP Soft, Sfax | Juillet – Septembre 2025 (2 mois)",
     bullets: [
-      "Authentification sécurisée par JWT dynamique (connexion/déconnexion)",
-      "Détection faciale en temps réel via caméras IP connectées au réseau",
-      "Enregistrement automatique de la date, l'heure et l'image lors de chaque détection",
-      "Notifications en temps réel avec photo et horodatage",
+      "Détection faciale en temps réel via caméras IP avec YOLOv8",
+      "Reconnaissance faciale avec face_recognition (réseau de neurones convolutif CNN de type ResNet, dlib) — modification de la méthode face_encodings (redimensionnement d'image et seuil de tolérance) pour l'adapter au contexte des caméras IP Enregistrement automatique de la date, l'heure et l'image lors de chaque détection",
+      "Développement du backend avec Django REST et du frontend avec React.js",
+      "Notifications en temps réel par email (photo, horodatage) via SMTP",
       "Tableau de bord affichant l'historique des présences et statistiques",
     ],
   },
@@ -47,15 +46,14 @@ const experiences = [
     title: "Stage — Data Scientist",
     period: "Yperflow, Sfax | Juillet – Août 2024 (2 mois)",
     bullets: [
-      "Extraction, conversion, redimensionnement et traitement d'images avec OpenCV et Tesseract OCR",
+      "Extraction, conversion et traitement d'images avec OpenCV et Tesseract OCR",
       "Utilisation de PDDLOCR et TableCV pour automatiser la détection et l'organisation des données extraites",
-      "Extraction de données depuis des PDF (normaux et scannés) avec PyMuPDF, Fitz et Tesseract OCR",
-      "Création, gestion des propriétés et sécurisation (mot de passe) de documents avec Spire",
+      "Extraction de données depuis des PDF avec PyMuPDF, Fitz et Tesseract OCR",
       "Extraction structurée de données via expressions régulières (module re)",
     ],
   },
   {
-    title: "Stage de fin d'études — Architecture Big Data pour l'analyse de données rapides et changeantes",
+    title: "Stage de fin d'études — ingénierie de données",
     period: "Sifast, Sfax | Février – Juin 2024 (5 mois)",
     bullets: [
       "Ingestion de données avec Apache Kafka depuis des API, consommées par Hadoop (HDFS), Kudu et Spark",
@@ -152,7 +150,8 @@ function CV() {
               <ul className="space-y-2 text-sm text-muted-foreground">
                 <li><span className="font-medium text-foreground">Big Data</span> Kafka, Spark, Spark Streaming, Hadoop, Kudu, Impala</li>
                 <li><span className="font-medium text-foreground">Langages</span> Python, Java, TypeScript, JavaScript, SQL, PHP</li>
-                <li><span className="font-medium text-foreground">Frameworks</span> Django, React, Angular, Laravel 11</li>
+                <li><span className="font-medium text-foreground">Computer Vision</span> YOLOv8, OpenCV, face_recognition (dlib), CNN</li>
+                <li><span className="font-medium text-foreground">Frameworks</span> Django, React, Laravel 11</li>
                 <li><span className="font-medium text-foreground">Bases de données</span> PostgreSQL, MySQL</li>
                 <li><span className="font-medium text-foreground">Outils</span> Git, Docker, Postman, Firebase</li>
               </ul>
