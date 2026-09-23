@@ -37,7 +37,7 @@ function About() {
       <div className="mt-8 space-y-5 text-sm leading-relaxed text-muted-foreground">
         <p>
           Bonjour, je m'appelle <span className="text-primary">Aymen Kacem</span>, j'ai 24 ans et je
-          suis étudiant ingénieur en informatique, spécialité Big Data & Intelligence Artificielle.
+          suis étudiant ingénieur en informatique, spécialité Big Data & Intelligence Artificielle & Full Stack Developer.
         </p>
         <ul className="space-y-1 pl-4">
           <li>- Dernière année du cycle d'ingénieur (IIT Sfax · échange à l'UTT, France)</li>

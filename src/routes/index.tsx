@@ -12,13 +12,13 @@ const avatar = { url: "/profile.jpg" };
 export const Route = createFileRoute("/")({
   head: () => ({
     meta: [
-      { title: "Aymen Kacem — Ingénieur Big Data & IA" },
+      { title: "Aymen Kacem — Ingénieur Big Data, IA & Full Stack Developer" },
       {
         name: "description",
         content:
           "Portfolio d'Aymen Kacem, étudiant ingénieur en Big Data et Intelligence Artificielle : projets, études et CV.",
       },
-      { property: "og:title", content: "Aymen Kacem — Ingénieur Big Data & IA" },
+      { property: "og:title", content: "Aymen Kacem — Ingénieur Big Data & IA & Full Stack Developer" },
       {
         property: "og:description",
         content: "Projets Big Data, IA et développement full-stack d'Aymen Kacem.",
@@ -97,9 +97,9 @@ function Index() {
             <h1 className="mt-3 text-3xl font-bold uppercase md:text-4xl">
               C'est <span className="text-gradient">Aymen Kacem</span>
             </h1>
-            <p className="mt-4 max-w-md text-muted-foreground">
+            <p className="mt-5 text-muted-foreground">
               Étudiant ingénieur en informatique, spécialité{" "}
-              <span className="text-primary">Big Data & Intelligence Artificielle</span>, en échange
+              <span className="text-primary">Big Data, IA & Full Stack Developer</span>, en échange
               académique à l'UTT, France.
             </p>
             <div className="mt-8 flex flex-wrap gap-3">
@@ -131,7 +131,8 @@ function Index() {
         </h2>
         <div className="mt-10 space-y-5 text-sm leading-relaxed text-muted-foreground">
           <p>
-            Je suis étudiant ingénieur en informatique à l'
+            Bonjour, je m'appelle Aymen Kacem, j'ai 24 ans et je suis étudiant ingénieur en informatique, spécialité{" "}
+            <span className="text-primary">Big Data, Intelligence Artificielle & Full Stack Developer</span>, à l'
             <span className="text-primary">Institut International de Technologie (IIT), Sfax</span>,
             actuellement en échange académique à l'
             <span className="text-primary">Université de Technologie de Troyes</span>.

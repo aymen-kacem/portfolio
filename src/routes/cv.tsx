@@ -10,10 +10,10 @@ export const Route = createFileRoute("/cv")({
       {
         name: "description",
         content:
-          "CV d'Aymen Kacem : éducation, expériences professionnelles, projets et compétences en Big Data et IA.",
+          "CV d'Aymen Kacem : éducation, expériences professionnelles, projets et compétences en Big Data, IA et Développement Web.",
       },
       { property: "og:title", content: "CV — Aymen Kacem" },
-      { property: "og:description", content: "CV complet d'Aymen Kacem, Big Data & IA." },
+      { property: "og:description", content: "CV complet d'Aymen Kacem, Big Data & IA & Full Stack Developer." },
     ],
   }),
   component: CV,
@@ -82,15 +82,15 @@ function CV() {
             <div className="text-center">
               <p className="font-display text-xl font-bold">Aymen Kacem</p>
               <p className="mt-1 text-xs text-primary">
-                Étudiant Ingénieur — Data, Big Data & IA
+                Étudiant Ingénieur — Big Data, IA & Full Stack Developer
               </p>
             </div>
 
             <Block title="Profil">
 
               <p className="mt-2 text-sm text-muted-foreground">
-                Étudiant ingénieur en informatique, spécialité Big Data & Intelligence
-                Artificielle.
+                Étudiant ingénieur en informatique, spécialité Big Data, Intelligence
+                Artificielle & Développement Full Stack.
               </p>
               <p className="mt-2 text-sm text-muted-foreground">
                 En échange académique à l'Université de Technologie de Troyes (UTT), France,
