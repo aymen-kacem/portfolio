@@ -231,6 +231,64 @@ function Projects() {
               régulières.
             </p>
           </article>
+
+          <article className="surface-card p-6 flex flex-col">
+            <div>
+              <span className="text-xs tracking-wide text-primary uppercase">
+                Projet académique · Mars 2026
+              </span>
+              <h2 className="mt-2 text-base font-semibold">
+                Plateforme de Gestion de Coworking
+              </h2>
+              <p className="mt-3 text-sm leading-relaxed text-muted-foreground font-medium">
+                ASP.NET Core Web API (backend) et Blazor WebAssembly (frontend)
+              </p>
+              <ul className="mt-3 space-y-1.5 text-sm leading-relaxed text-muted-foreground">
+                <li>• Conception d'une architecture en couches (Controllers, Services, Repositories, Models, DTOs) avec ASP.NET Core Web API, SQL Server et Entity Framework Core</li>
+                <li>• Authentification sécurisée par JSON Web Token (JWT) avec gestion de 3 rôles (Étudiant, Administrateur, Technicien) et réinitialisation de mot de passe par email</li>
+                <li>• Développement du frontend en Blazor WebAssembly (C#) : gestion des espaces, abonnements, réservations et maintenances, avec composants réutilisables et communication HTTP vers l'API</li>
+                <li>• Application du Repository Pattern pour centraliser l'accès aux données, et documentation de l'API via Swagger (OpenAPI)</li>
+              </ul>
+            </div>
+          </article>
+
+          <article className="surface-card p-6 flex flex-col">
+            <div>
+              <span className="text-xs tracking-wide text-primary uppercase">
+                Projet académique · Avril 2026
+              </span>
+              <h2 className="mt-2 text-base font-semibold">
+                Application E-commerce
+              </h2>
+              <p className="mt-3 text-sm leading-relaxed text-muted-foreground font-medium">
+                Vente de livres en ligne avec gestion de back-office — Symfony
+              </p>
+              <ul className="mt-3 space-y-1.5 text-sm leading-relaxed text-muted-foreground">
+                <li>• Développement d'une plateforme e-commerce de vente de livres avec Symfony (catalogue, panier, commandes)</li>
+                <li>• Mise en place d'un back-office pour la gestion des produits, des commandes et des utilisateurs</li>
+              </ul>
+            </div>
+          </article>
+
+          <article className="surface-card p-6 flex flex-col">
+            <div>
+              <span className="text-xs tracking-wide text-primary uppercase">
+                Projet académique · Juin 2026
+              </span>
+              <h2 className="mt-2 text-base font-semibold">
+                Plateforme de Gestion d'Événements et de Formations (E-learning)
+              </h2>
+              <p className="mt-3 text-sm leading-relaxed text-muted-foreground font-medium">
+                SPA modulaire Angular 16 avec authentification Firebase et dashboard analytique
+              </p>
+              <ul className="mt-3 space-y-1.5 text-sm leading-relaxed text-muted-foreground">
+                <li>• Conception d'une Single Page Application modulaire avec Angular 16, couvrant plusieurs domaines fonctionnels (Utilisateurs, Événements, Cours, Catégories)</li>
+                <li>• Interface réactive et ergonomique avec Angular Material et @angular/flex-layout ; authentification et gestion de profils sécurisée via Firebase Authentication</li>
+                <li>• Dashboard analytique interactif (Chart.js, ng2-charts) pour la visualisation des indicateurs clés</li>
+                <li>• API RESTful mockée avec JSON-Server (gestion asynchrone)</li>
+              </ul>
+            </div>
+          </article>
         </div>
       </div>
 

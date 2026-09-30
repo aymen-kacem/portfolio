@@ -32,7 +32,7 @@ const experiences = [
     ],
   },
   {
-    title: "Stage — Data Scientist",
+    title: "Stage — Data Scientist & Développeur Full Stack",
     period: "IP Soft, Sfax | Juillet – Septembre 2025 (2 mois)",
     bullets: [
       "Détection faciale en temps réel via caméras IP avec YOLOv8",
@@ -148,11 +148,12 @@ function CV() {
 
             <Block title="Compétences clés">
               <ul className="space-y-2 text-sm text-muted-foreground">
+                <li><span className="font-medium text-foreground">Langages</span> JavaScript, TypeScript, PHP, Java, Python, C#, SQL</li>
+                <li><span className="font-medium text-foreground">Frontend</span> React.js, Angular 16, Blazor WebAssembly</li>
+                <li><span className="font-medium text-foreground">Backend & API</span> Laravel 11, Django REST, Symfony, ASP.NET Core Web API, REST, JWT, WebSockets</li>
                 <li><span className="font-medium text-foreground">Big Data</span> Kafka, Spark, Spark Streaming, Hadoop, Kudu, Impala</li>
-                <li><span className="font-medium text-foreground">Langages</span> Python, Java, TypeScript, JavaScript, SQL, PHP</li>
-                <li><span className="font-medium text-foreground">Computer Vision</span> YOLOv8, OpenCV, face_recognition (dlib), CNN</li>
-                <li><span className="font-medium text-foreground">Frameworks</span> Django, React, Laravel 11</li>
-                <li><span className="font-medium text-foreground">Bases de données</span> PostgreSQL, MySQL</li>
+                <li><span className="font-medium text-foreground">Data Science & BI</span> OpenCV, YOLOv8, SSIS, SSAS, OLAP, MDX, Pandas</li>
+                <li><span className="font-medium text-foreground">Bases de données</span> MySQL, PostgreSQL, SQL Server</li>
                 <li><span className="font-medium text-foreground">Outils</span> Git, Docker, Postman, Firebase</li>
               </ul>
             </Block>
@@ -160,8 +161,8 @@ function CV() {
             <Block title="Centres d'intérêt">
               <ul className="space-y-1 text-sm text-muted-foreground">
                 <li>Machine Learning & Vision par ordinateur</li>
-                <li>Architectures Big Data</li>
-                <li>Développement web full-stack</li>
+                <li>Architectures Big Data & Data Warehousing (BI)</li>
+                <li>Développement web full-stack & API</li>
               </ul>
             </Block>
           </aside>
@@ -222,15 +223,6 @@ function CV() {
         </div>
       </div>
 
-      <div className="mt-8 text-center">
-        <a
-          href={cvFile.url}
-          download="Aymen_Kacem_CV.pdf"
-          className="inline-flex items-center gap-2 rounded-md bg-primary px-5 py-2.5 text-sm font-medium text-primary-foreground transition-opacity hover:opacity-90"
-        >
-          <Download className="size-4" /> Télécharger mon CV
-        </a>
-      </div>
     </div>
   );
 }
