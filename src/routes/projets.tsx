@@ -250,6 +250,16 @@ function Projects() {
                 <li>• Application du Repository Pattern pour centraliser l'accès aux données, et documentation de l'API via Swagger (OpenAPI)</li>
               </ul>
             </div>
+            <div className="mt-auto pt-6 flex flex-wrap gap-3">
+              <a
+                href="https://github.com/aymen-kacem/Gestion-de-Biblioth-que-"
+                target="_blank"
+                rel="noreferrer"
+                className="inline-flex items-center gap-2 rounded-md border border-border px-3 py-1.5 text-xs transition-colors hover:bg-secondary"
+              >
+                <Github className="size-3.5" /> Code Source
+              </a>
+            </div>
           </article>
 
           <article className="surface-card p-6 flex flex-col">
@@ -287,6 +297,16 @@ function Projects() {
                 <li>• Dashboard analytique interactif (Chart.js, ng2-charts) pour la visualisation des indicateurs clés</li>
                 <li>• API RESTful mockée avec JSON-Server (gestion asynchrone)</li>
               </ul>
+            </div>
+            <div className="mt-auto pt-6 flex flex-wrap gap-3">
+              <a
+                href="https://github.com/aymen-kacem/Gestion_Evnements"
+                target="_blank"
+                rel="noreferrer"
+                className="inline-flex items-center gap-2 rounded-md border border-border px-3 py-1.5 text-xs transition-colors hover:bg-secondary"
+              >
+                <Github className="size-3.5" /> Code Source
+              </a>
             </div>
           </article>
         </div>
